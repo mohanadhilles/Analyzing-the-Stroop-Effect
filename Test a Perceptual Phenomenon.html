@@ -13117,8 +13117,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Analyzing-the-Stroop-Effect">Analyzing the Stroop Effect<a class="anchor-link" href="#Analyzing-the-Stroop-Effect">&#182;</a></h3><p>Perform the analysis in the space below. Remember to follow <a href="https://docs.google.com/document/d/1-OkpZLjG_kX9J6LIQ5IltsqMzVWjh36QpnP2RYpVdPU/pub?embedded=True">the instructions</a> and review the <a href="https://review.udacity.com/#!/rubrics/71/view">project rubric</a> before submitting. Once you've completed the analysis and write-up, download this file as a PDF or HTML file, upload that PDF/HTML into the workspace here (click on the orange Jupyter icon in the upper left then Upload), then use the Submit Project button at the bottom of this page. This will create a zip file containing both this .ipynb doc and the PDF/HTML doc that will be submitted for your project.</p>
-<p>(1) What is the independent variable? What is the dependent variable?</p>
-
+<h4 id="(1)-What-is-the-independent-variable?-What-is-the-dependent-variable?">(1) What is the independent variable? What is the dependent variable?<a class="anchor-link" href="#(1)-What-is-the-independent-variable?-What-is-the-dependent-variable?">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13133,7 +13132,11 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>(2) What is an appropriate set of hypotheses for this task? Specify your null and alternative hypotheses, and clearly define any notation used. Justify your choices.</p>
+<h4 id="(2)-What-is-an-appropriate-set-of-hypotheses-for-this-task-and-What-kind-of-statistical-test-do-you-expect-to-perform?">(2) What is an appropriate set of hypotheses for this task and What kind of statistical test do you expect to perform?<a class="anchor-link" href="#(2)-What-is-an-appropriate-set-of-hypotheses-for-this-task-and-What-kind-of-statistical-test-do-you-expect-to-perform?">&#182;</a></h4><p>Specify your null and alternative hypotheses, and clearly define any notation used. Justify your choices, 
+Null Hypothsis, H0 - The mismatch of color to word will have no effect or decrease time to recognize and say the color
+Alternate Hypothesis, H1 - The mismatch of color to word will increase time to recognize and say the color
+H0: μi ≤ μc (μi - population mean of incongruent values, μc - population mean of congruent values)
+H1: μi &gt; μc (μi - population mean of incongruent values, μc - population mean of congruent values)</p>
 
 </div>
 </div>
@@ -13149,14 +13152,29 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>(3) Report some descriptive statistics regarding this dataset. Include at least one measure of central tendency and at least one measure of variability. The name of the data file is 'stroopdata.csv'.</p>
+<h4 id="(3)-Report-some-descriptive-statistics-regarding-this-dataset.-Include-at-least-one-measure-of-central-tendency-and-at-least-one-measure-of-variability.-The-name-of-the-data-file-is-'stroopdata.csv'.">(3) Report some descriptive statistics regarding this dataset. Include at least one measure of central tendency and at least one measure of variability. The name of the data file is 'stroopdata.csv'.<a class="anchor-link" href="#(3)-Report-some-descriptive-statistics-regarding-this-dataset.-Include-at-least-one-measure-of-central-tendency-and-at-least-one-measure-of-variability.-The-name-of-the-data-file-is-'stroopdata.csv'.">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>sample size = 24</li>
+<li>mean: $xbar = \Sigma{x}/n$ (where xbar is the sample mean, x is the value and n is the number of samples)</li>
+<li>Congruent: 14.05, Incogruent: 22.02</li>
+<li>median: as the data seems slightly positively skewed, median is a better representation of central tendency</li>
+<li>Congruent: 14.3565, Incongruent: 21.0175</li>
+<li>sample std. deviation: $\sigma = \Sigma{(x - xbar)^2}/n$</li>
+<li>Congruent: 3.56, Incongruent: 4.80</li>
+</ul>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Perform the analysis here</span>
@@ -13201,7 +13219,7 @@ memory usage: 464.0 bytes
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#import data set</span>
@@ -13233,7 +13251,7 @@ Stroop Data Descriptive
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[21]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -13314,7 +13332,7 @@ Stroop Data Descriptive
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">congruent_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Congruent&quot;</span><span class="p">]</span>
@@ -13370,7 +13388,7 @@ max    22.328000    35.255000   -1.950000
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculations for a sample t-value[7] </span>
@@ -13423,7 +13441,7 @@ p-value = 0.00000004
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;whitegrid&#39;</span><span class="p">)</span>
@@ -13443,7 +13461,7 @@ p-value = 0.00000004
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13483,7 +13501,7 @@ p-value = 0.00000004
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;whitegrid&#39;</span><span class="p">)</span>
@@ -13503,7 +13521,7 @@ p-value = 0.00000004
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -13543,7 +13561,7 @@ p-value = 0.00000004
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;stroopdata.csv&#39;</span><span class="p">)</span>
@@ -13590,7 +13608,7 @@ p-value = 0.00000004
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Difference&#39;</span><span class="p">],</span><span class="n">rug</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;#16677c&quot;</span><span class="p">,</span><span class="n">kde</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -13609,7 +13627,7 @@ p-value = 0.00000004
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -13657,7 +13675,7 @@ p-value = 0.00000004
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean_congurent</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Congruent&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
